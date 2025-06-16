@@ -34,7 +34,7 @@ function Home() {
     <div>
       <div style={{ position: 'relative', width: '100%' }}>
         <img
-          src="/banniere.jpg"
+          src={process.env.PUBLIC_URL + "/banniere.jpg"}
           alt="Bannière hypnose"
           style={{
             width: '100%',
@@ -91,7 +91,7 @@ function Home() {
       >
         {/* Photo de profil */}
         <img
-          src="/photo-profil.jpg"
+          src={process.env.PUBLIC_URL + "/photo-profil.jpg"}
           alt="Photo de profil"
           style={{
             width: '300px',
@@ -165,19 +165,19 @@ function Home() {
             {/* Ligne 1 */}
             <Link to="/stress-anxiete" style={{ textDecoration: 'none', color: 'inherit' }}>
               <div style={bulleStyle} className="bulle-hover">
-                <img src="/stress.jpg" alt="Stress & anxiété" style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center', borderRadius: '50%' }} />
+                <img src={process.env.PUBLIC_URL + "/stress.jpg"} alt="Stress & anxiété" style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center', borderRadius: '50%' }} />
               </div>
               <div style={{ textAlign: 'center', fontWeight: 'bold', fontSize: '1.08em', color: '#222', marginTop: 12 }}>Stress & anxiété</div>
             </Link>
             <Link to="/comportements" style={{ textDecoration: 'none', color: 'inherit' }}>
               <div style={bulleStyle} className="bulle-hover">
-                <img src="/addictions.jpg" alt="Addictions" style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center', borderRadius: '50%' }} />
+                <img src={process.env.PUBLIC_URL + "/addictions.jpg"} alt="Addictions" style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center', borderRadius: '50%' }} />
               </div>
               <div style={{ textAlign: 'center', fontWeight: 'bold', fontSize: '1.08em', color: '#222', marginTop: 12 }}>Addictions</div>
             </Link>
             <Link to="/emotions" style={{ textDecoration: 'none', color: 'inherit' }}>
               <div style={bulleStyle} className="bulle-hover">
-                <img src="/emotions.jpg" alt="Gestion des émotions" style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center', borderRadius: '50%' }} />
+                <img src={process.env.PUBLIC_URL + "/emotions.jpg"} alt="Gestion des émotions" style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center', borderRadius: '50%' }} />
               </div>
               <div style={{ textAlign: 'center', fontWeight: 'bold', fontSize: '1.08em', color: '#222', marginTop: 12 }}>Gestion des émotions</div>
             </Link>
@@ -186,19 +186,19 @@ function Home() {
             {/* Ligne 2 */}
             <Link to="/douleurs" style={{ textDecoration: 'none', color: 'inherit' }}>
               <div style={bulleStyle} className="bulle-hover">
-                <img src="/douleurs.jpg" alt="Douleurs" style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center', borderRadius: '50%' }} />
+                <img src={process.env.PUBLIC_URL + "/douleurs.jpg"} alt="Douleurs" style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center', borderRadius: '50%' }} />
               </div>
               <div style={{ textAlign: 'center', fontWeight: 'bold', fontSize: '1.08em', color: '#222', marginTop: 12 }}>Douleurs</div>
             </Link>
             <Link to="/developpement-personnel" style={{ textDecoration: 'none', color: 'inherit' }}>
               <div style={bulleStyle} className="bulle-hover">
-                <img src="/developpement.jpg" alt="Développement personnel" style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center', borderRadius: '50%' }} />
+                <img src={process.env.PUBLIC_URL + "/developpement.jpg"} alt="Développement personnel" style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center', borderRadius: '50%' }} />
               </div>
               <div style={{ textAlign: 'center', fontWeight: 'bold', fontSize: '1.08em', color: '#222', marginTop: 12 }}>Développement personnel</div>
             </Link>
             <Link to="/sommeil" style={{ textDecoration: 'none', color: 'inherit' }}>
               <div style={bulleStyle} className="bulle-hover">
-                <img src="/sommeil.jpg" alt="Sommeil" style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center', borderRadius: '50%' }} />
+                <img src={process.env.PUBLIC_URL + "/sommeil.jpg"} alt="Sommeil" style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center', borderRadius: '50%' }} />
               </div>
               <div style={{ textAlign: 'center', fontWeight: 'bold', fontSize: '1.08em', color: '#222', marginTop: 12 }}>Sommeil</div>
             </Link>
