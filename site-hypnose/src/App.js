@@ -353,7 +353,7 @@ const bulleStyle = {
 
 function App() {
   return (
-    <Router>
+    <Router basename="/hypnose">
       <ScrollToTop />
       <Navbar />
       <div style={{ paddingTop: '64px' }} />
