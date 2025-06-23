@@ -106,14 +106,6 @@ export default function FAQ() {
             </AccordionDetails>
           </Accordion>
         ))}
-        <p style={{
-          color: 'crimson',
-          fontWeight: 'bold',
-          marginTop: '32px',
-          textAlign: 'center'
-        }}>
-          Important : L'accompagnement ne peut en aucun cas se substituer à un avis médical ou à un traitement médical.
-        </p>
       </div>
     </div>
   );
