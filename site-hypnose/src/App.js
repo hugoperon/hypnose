@@ -32,8 +32,9 @@ function ScrollToTop() {
 function Home() {
   return (
     <div>
-      <div style={{ position: 'relative', width: '100%' }}>
+      <div className="banniere-top" style={{ position: 'relative', width: '100%' }}>
         <img
+          className="banniere-img"
           src={process.env.PUBLIC_URL + "/banniere.jpg"}
           alt="Bannière hypnose"
           style={{
@@ -58,7 +59,7 @@ function Home() {
           pointerEvents: 'none',
         }}>
           <div style={{
-            fontSize: '2.7rem',
+            fontSize: '3.5rem',
             fontWeight: 'bold',
             marginBottom: '18px',
             textAlign: 'center',
@@ -79,6 +80,7 @@ function Home() {
 
       {/* Section Qui suis-je */}
       <div
+        className="qui-suis-je-row"
         style={{
           display: 'flex',
           alignItems: 'center',
@@ -90,21 +92,40 @@ function Home() {
         }}
       >
         {/* Photo de profil */}
-        <img
-          src={process.env.PUBLIC_URL + "/photo-profil.jpg"}
-          alt="Photo de profil"
-          style={{
-            width: '300px',
-            height: '375px',
-            objectFit: 'cover',
-            borderRadius: '10px',
-            boxShadow: '0 4px 16px rgba(0,0,0,0.1)',
-            marginRight: '50px',
-            flexShrink: 0
-          }}
-        />
+        <div style={{ position: 'relative', width: 'max-content' }}>
+          <div className="carre-bleu-profil" style={{
+            width: '240px',
+            height: '270px',
+            background: '#1976d2',
+            borderRadius: '18px',
+            position: 'absolute',
+            top: '-70px',
+            left: '-90px',
+            zIndex: 0,
+            boxShadow: '0 4px 24px rgba(25, 118, 210, 0.10)'
+          }}></div>
+          <img
+            src={process.env.PUBLIC_URL + "/photo-profil.jpg"}
+            alt="Photo de profil"
+            style={{
+              width: '100%',
+              maxWidth: '300px',
+              height: 'auto',
+              objectFit: 'cover',
+              borderRadius: '10px',
+              boxShadow: '0 4px 16px rgba(0,0,0,0.1)',
+              marginRight: '50px',
+              flexShrink: 0,
+              display: 'block',
+              marginLeft: 'auto',
+              marginRight: 'auto',
+              position: 'relative',
+              zIndex: 1
+            }}
+          />
+        </div>
         {/* Texte Qui suis-je */}
-        <div>
+        <div style={{ width: '100%' }}>
           <h2>Qui suis-je&nbsp;?</h2>
           <p style={{ textAlign: 'justify', lineHeight: '1.7' }}>
             Bonjour, je m'appelle Cécile Vacher, je suis praticienne en hypnose, maître praticienne en PNL, et j'ai été formée aux thérapies brèves et systémiques. Mon approche se fonde sur un respect profond de chaque personne, en prenant en compte son histoire, ses ressources et ses besoins spécifiques.<br /><br />
@@ -112,26 +133,17 @@ function Home() {
             L'hypnose peut vous accompagner de manière simple et rapide, peut intervenir dans différents domaines, comme la gestion des émotions, des douleurs, des dépendances, des traumatismes et dans la préparation mentale.<br /><br />
             Mon approche, c'est l'alliance des thérapies. Les thérapies dites brèves sont des thérapies qui peuvent vous permettre de vous sentir mieux rapidement car elles sont davantage orientées sur le comment et les solutions plutôt que sur le pourquoi et les causes.<br /><br />
             Si vous êtes à la recherche d'un espace sécurisé pour avancer, retrouver équilibre et sérénité, je serais heureuse de vous accueillir et de vous guider sur votre chemin.<br /><br />
-            Parce qu'une consultation, c'est aussi une rencontre. Contactez-moi.
+            Parce qu'une consultation, c'est aussi une rencontre. <a href="https://www.google.com" target="_blank" rel="noopener noreferrer" style={{color: '#1976d2', fontWeight: 'bold', textDecoration: 'none', borderBottom: '2px solid #1976d2'}}>Contactez-moi</a>.
           </p>
+          <br />
+          <br />
+          <br />
+          <br />
         </div>
       </div>
 
       {/* Section Domaines d'intervention */}
-      <div
-        style={{
-          width: '100vw',
-          position: 'relative',
-          left: '50%',
-          right: '50%',
-          marginLeft: '-50vw',
-          marginRight: '-50vw',
-          background: '#1976d2',
-          padding: '0',
-          marginTop: '60px',
-          marginBottom: 0,
-        }}
-      >
+      <div className="main-banner">
         <h2 style={{
           fontSize: '3rem',
           fontWeight: 700,
@@ -144,14 +156,12 @@ function Home() {
           Mes domaines d'intervention
         </h2>
       </div>
-      <div
-        style={{
-          maxWidth: '1100px',
-          margin: '0 auto 40px auto',
-          padding: '0 20px',
-          textAlign: 'center'
-        }}
-      >
+      <div className="main-content">
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
         <div
           style={{
             display: 'flex',
@@ -161,43 +171,43 @@ function Home() {
             marginTop: '40px',
           }}
         >
-          <div style={{ display: 'flex', justifyContent: 'center', gap: '40px', marginBottom: '0' }}>
+          <div className="bulle-row">
             {/* Ligne 1 */}
             <Link to="/stress-anxiete" style={{ textDecoration: 'none', color: 'inherit' }}>
-              <div style={bulleStyle} className="bulle-hover">
+              <div className="bulle bulle-hover">
                 <img src={process.env.PUBLIC_URL + "/stress.jpg"} alt="Stress & anxiété" style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center', borderRadius: '50%' }} />
               </div>
               <div style={{ textAlign: 'center', fontWeight: 'bold', fontSize: '1.08em', color: '#222', marginTop: 12 }}>Stress & anxiété</div>
             </Link>
             <Link to="/comportements" style={{ textDecoration: 'none', color: 'inherit' }}>
-              <div style={bulleStyle} className="bulle-hover">
+              <div className="bulle bulle-hover">
                 <img src={process.env.PUBLIC_URL + "/addictions.jpg"} alt="Addictions" style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center', borderRadius: '50%' }} />
               </div>
               <div style={{ textAlign: 'center', fontWeight: 'bold', fontSize: '1.08em', color: '#222', marginTop: 12 }}>Addictions</div>
             </Link>
             <Link to="/emotions" style={{ textDecoration: 'none', color: 'inherit' }}>
-              <div style={bulleStyle} className="bulle-hover">
+              <div className="bulle bulle-hover">
                 <img src={process.env.PUBLIC_URL + "/emotions.jpg"} alt="Gestion des émotions" style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center', borderRadius: '50%' }} />
               </div>
               <div style={{ textAlign: 'center', fontWeight: 'bold', fontSize: '1.08em', color: '#222', marginTop: 12 }}>Gestion des émotions</div>
             </Link>
           </div>
-          <div style={{ display: 'flex', justifyContent: 'center', gap: '40px', marginTop: '0' }}>
+          <div className="bulle-row">
             {/* Ligne 2 */}
             <Link to="/douleurs" style={{ textDecoration: 'none', color: 'inherit' }}>
-              <div style={bulleStyle} className="bulle-hover">
+              <div className="bulle bulle-hover">
                 <img src={process.env.PUBLIC_URL + "/douleurs.jpg"} alt="Douleurs" style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center', borderRadius: '50%' }} />
               </div>
               <div style={{ textAlign: 'center', fontWeight: 'bold', fontSize: '1.08em', color: '#222', marginTop: 12 }}>Douleurs</div>
             </Link>
             <Link to="/developpement-personnel" style={{ textDecoration: 'none', color: 'inherit' }}>
-              <div style={bulleStyle} className="bulle-hover">
+              <div className="bulle bulle-hover">
                 <img src={process.env.PUBLIC_URL + "/developpement.jpg"} alt="Développement personnel" style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center', borderRadius: '50%' }} />
               </div>
               <div style={{ textAlign: 'center', fontWeight: 'bold', fontSize: '1.08em', color: '#222', marginTop: 12 }}>Développement personnel</div>
             </Link>
             <Link to="/sommeil" style={{ textDecoration: 'none', color: 'inherit' }}>
-              <div style={bulleStyle} className="bulle-hover">
+              <div className="bulle bulle-hover">
                 <img src={process.env.PUBLIC_URL + "/sommeil.jpg"} alt="Sommeil" style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center', borderRadius: '50%' }} />
               </div>
               <div style={{ textAlign: 'center', fontWeight: 'bold', fontSize: '1.08em', color: '#222', marginTop: 12 }}>Sommeil</div>
@@ -206,20 +216,7 @@ function Home() {
         </div>
       </div>
       {/* Section Infos pratiques */}
-      <div
-        style={{
-          width: '100vw',
-          position: 'relative',
-          left: '50%',
-          right: '50%',
-          marginLeft: '-50vw',
-          marginRight: '-50vw',
-          background: '#1976d2',
-          padding: '0',
-          marginTop: '60px',
-          marginBottom: 0,
-        }}
-      >
+      <div className="infos-banner">
         <h2 style={{
           textAlign: 'center',
           margin: 0,
@@ -232,32 +229,13 @@ function Home() {
           Infos pratiques
         </h2>
       </div>
-      <div
-        style={{
-          width: '100vw',
-          position: 'relative',
-          left: '50%',
-          right: '50%',
-          marginLeft: '-50vw',
-          marginRight: '-50vw',
-          background: '#f7f9fc',
-          padding: '0',
-          marginTop: '40px',
-        }}
-      >
-        <div
-          style={{
-            display: 'flex',
-            justifyContent: 'center',
-            alignItems: 'flex-start',
-            gap: '24px',
-            width: '100%',
-            maxWidth: '1500px',
-            margin: '0 auto 60px auto',
-            padding: '0 32px',
-            flexWrap: 'nowrap',
-          }}
-        >
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <div className="infos-content">
+        <div className="infos-cols">
           {/* Colonne 1 */}
           <div
             style={{
@@ -265,10 +243,6 @@ function Home() {
               borderRadius: '18px',
               boxShadow: '0 8px 32px rgba(25, 118, 210, 0.10), 0 2px 8px rgba(0,0,0,0.07)',
               padding: '48px 36px 40px 36px',
-              minWidth: '340px',
-              flex: '1 1 0',
-              maxWidth: '480px',
-              height: '320px',
               display: 'flex',
               flexDirection: 'column',
               justifyContent: 'flex-start',
@@ -276,10 +250,9 @@ function Home() {
           >
             <h3 style={{ fontSize: '2.1rem', color: '#1976d2', fontWeight: 700, marginBottom: 22, marginTop: 0, lineHeight: 1 }}>Pour venir me voir</h3>
             <ul style={{ paddingLeft: 22, margin: 0, fontSize: '1.15rem', lineHeight: 1.7 }}>
-              <li>144 av. Victor Basch</li>
-              <li>91360 Villemoisson s/Orge</li>
+              <li>144 av. Victor Basch <br />91360 Villemoisson s/Orge</li>
               <li>RER C St-Geneviève des Bois</li>
-              <li>Sortie A6, Savigny/Orge</li>
+              <li>Sortie A6, Savigny-sur-Orge</li>
               <li>Possibilité de séances en visio</li>
             </ul>
           </div>
@@ -290,10 +263,6 @@ function Home() {
               borderRadius: '18px',
               boxShadow: '0 8px 32px rgba(25, 118, 210, 0.10), 0 2px 8px rgba(0,0,0,0.07)',
               padding: '48px 36px 40px 36px',
-              minWidth: '340px',
-              flex: '1 1 0',
-              maxWidth: '480px',
-              height: '320px',
               display: 'flex',
               flexDirection: 'column',
               justifyContent: 'flex-start',
@@ -303,7 +272,7 @@ function Home() {
             <ul style={{ paddingLeft: 22, margin: 0, fontSize: '1.15rem', lineHeight: 1.7 }}>
               <li>A.R.C.H.E : 1200 heures de formation en hypnose ericksonienne</li>
               <li>ARCHE : hypnose & addictologie</li>
-              <li>Jordan Veroat : hypnose rapide</li>
+              <li>Jordan Verot : hypnose rapide</li>
               <li>Psynapse : maître praticienne en PNL</li>
               <li>Psynapse : thérapies brèves & systémiques</li>
             </ul>
@@ -315,10 +284,6 @@ function Home() {
               borderRadius: '18px',
               boxShadow: '0 8px 32px rgba(25, 118, 210, 0.10), 0 2px 8px rgba(0,0,0,0.07)',
               padding: '48px 36px 40px 36px',
-              minWidth: '340px',
-              flex: '1 1 0',
-              maxWidth: '480px',
-              height: '320px',
               display: 'flex',
               flexDirection: 'column',
               justifyContent: 'flex-start',
@@ -326,7 +291,7 @@ function Home() {
           >
             <h3 style={{ fontSize: '2.1rem', color: '#1976d2', fontWeight: 700, marginBottom: 22, marginTop: 0, lineHeight: 1 }}>Disponibilités</h3>
             <ul style={{ paddingLeft: 22, margin: 0, fontSize: '1.15rem', lineHeight: 1.7 }}>
-              <li>Du lundi au vendredi 14h-19h (sauf mardi)</li>
+              <li>Du lundi au vendredi 14h-20h (sauf mardi)</li>
               <li>Samedi de 9h à 18h</li>
             </ul>
           </div>
@@ -376,7 +341,7 @@ function App() {
         {/* Tu pourras ajouter d'autres routes ici */}
       </Routes>
       {window.location.pathname !== '/' && (
-        <div style={{
+        <div className="important-message" style={{
           textAlign: 'center',
           color: 'crimson',
           fontWeight: 'bold',

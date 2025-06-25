@@ -2,30 +2,31 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 export default function Footer() {
+
   return (
-    <footer style={{
-      background: '#f5f5f5',
-      borderTop: '1px solid #e0e0e0',
+    <footer className="footer-main" style={{
+      background: '#22384a',
+      borderTop: '1px solid #1a2733',
       marginTop: '60px',
       padding: '32px 0 0 0',
       textAlign: 'center',
       fontSize: '1rem',
-      color: '#444',
+      color: '#f5f7fa',
     }}>
-      <div style={{ marginBottom: '12px', fontWeight: 'bold', fontSize: '1.1rem' }}>
+      <div style={{ marginBottom: '12px', fontWeight: 'bold', fontSize: '1.1rem', color: '#fff' }}>
         Cécile Vacher – Hypnose & Thérapies brèves
       </div>
       <div style={{ marginBottom: '10px' }}>
-        <Link to="/" style={{ margin: '0 12px', color: '#1976d2', textDecoration: 'none' }}>Accueil</Link>
-        <Link to="/faq" style={{ margin: '0 12px', color: '#1976d2', textDecoration: 'none' }}>FAQ</Link>
-        <Link to="/politique-confidentialite" style={{ margin: '0 12px', color: '#1976d2', textDecoration: 'none' }}>Politique de confidentialité</Link>
-        {/* <Link to="/mentions-legales" style={{ margin: '0 12px', color: '#1976d2', textDecoration: 'none' }}>Mentions légales</Link> */}
+        <Link to="/" style={{ margin: '0 12px', color: '#6ec6ff', textDecoration: 'none', fontWeight: 500 }}>Accueil</Link>
+        <Link to="/faq" style={{ margin: '0 12px', color: '#6ec6ff', textDecoration: 'none', fontWeight: 500 }}>FAQ</Link>
+        <Link to="/politique-confidentialite" style={{ margin: '0 12px', color: '#6ec6ff', textDecoration: 'none', fontWeight: 500 }}>Politique de confidentialité</Link>
+        {/* <Link to="/mentions-legales" style={{ margin: '0 12px', color: '#6ec6ff', textDecoration: 'none', fontWeight: 500 }}>Mentions légales</Link> */}
       </div>
-      <div style={{ fontSize: '0.95em', color: '#888' }}>
+      <div style={{ fontSize: '0.95em', color: '#b0c4d4' }}>
         &copy; {new Date().getFullYear()} CécileVacher.hypnose . Tous droits réservés.
       </div>
-      <hr style={{ margin: '32px 0 20px 0', border: 'none', borderTop: '1px solid #ddd' }} />
-      <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '8px', color: '#222', fontSize: '1em', marginBottom: '10px' }}>
+      <hr style={{ margin: '32px 0 20px 0', border: 'none', borderTop: '1px solid #39506a' }} />
+      <div className="footer-hugo" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '8px', color: '#e3eaf2', fontSize: '1em', marginBottom: '10px' }}>
         <div>Vous souhaitez un site web professionnel&nbsp;?</div>
         <div>
           Développé par Hugo Peron&nbsp;

@@ -5,15 +5,21 @@ export default function Contact() {
   const form = useRef();
   const [sent, setSent] = useState(false);
   const [error, setError] = useState(false);
+  const [consentChecked, setConsentChecked] = useState(false);
 
   const sendEmail = (e) => {
     e.preventDefault();
     setError(false);
+    // Met à jour la valeur du champ caché avant l'envoi
+    const consentInput = form.current.querySelector('input[name="consentement"]');
+    if (consentInput) {
+      consentInput.value = consentChecked ? 'Oui' : 'Non';
+    }
     emailjs.sendForm(
-      'service_2fv7mg7',      // à remplacer
-      'TON_TEMPLATE_ID',     // à remplacer
+      'service_q64t3i7',      // à remplacer
+      'template_q7squ7r',     // à remplacer
       form.current,
-      'TA_PUBLIC_KEY'        // à remplacer
+      'QkuPuLl52g6SG9z-U'        // à remplacer
     )
     .then(() => {
       setSent(true);
@@ -131,9 +137,16 @@ export default function Contact() {
               <textarea name="message" required rows={5} style={{ ...inputStyle, resize: 'vertical' }} />
             </label>
             <label style={{ display: 'flex', alignItems: 'center', fontSize: '0.98em' }}>
-              <input type="checkbox" name="consentement" required style={{ marginRight: 8 }} />
+              <input
+                type="checkbox"
+                style={{ marginRight: 8 }}
+                checked={consentChecked}
+                onChange={e => setConsentChecked(e.target.checked)}
+              />
               J'accepte d'être recontacté(e)
             </label>
+            {/* Champ caché pour envoyer Oui ou Non */}
+            <input type="hidden" name="consentement" value={consentChecked ? 'Oui' : 'Non'} />
             <button
               type="submit"
               style={{
@@ -168,5 +181,6 @@ const inputStyle = {
   borderRadius: 6,
   border: '1px solid #ccc',
   marginTop: 4,
-  fontSize: '1em'
+  fontSize: '1em',
+  boxSizing: 'border-box'
 };
