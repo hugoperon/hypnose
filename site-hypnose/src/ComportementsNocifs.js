@@ -1,8 +1,33 @@
 import React from 'react';
+import { Helmet } from 'react-helmet';
 
 export default function ComportementsNocifs() {
   return (
     <div style={{ width: '100%' }}>
+      <Helmet>
+        <title>Addictions & Comportements nocifs | Cécile Vacher Hypnose</title>
+        <meta name="description" content="Libérez-vous des addictions et comportements nocifs grâce à l'hypnose avec Cécile Vacher, praticienne à Villemoisson-sur-Orge. Tabac, alcool, compulsions, etc." />
+        <meta property="og:title" content="Addictions & Comportements nocifs | Cécile Vacher Hypnose" />
+        <meta property="og:description" content="Libérez-vous des addictions et comportements nocifs grâce à l'hypnose avec Cécile Vacher, praticienne à Villemoisson-sur-Orge. Tabac, alcool, compulsions, etc." />
+        <meta property="og:type" content="article" />
+        <meta property="og:url" content="https://www.cecile91-hypnose.fr/comportements" />
+        <script type="application/ld+json">{`
+          {
+            "@context": "https://schema.org",
+            "@type": "Article",
+            "headline": "Addictions & Comportements nocifs",
+            "author": {
+              "@type": "Person",
+              "name": "Cécile Vacher"
+            },
+            "publisher": {
+              "@type": "Organization",
+              "name": "Cécile Vacher - Hypnose"
+            },
+            "url": "https://www.cecile91-hypnose.fr/comportements"
+          }
+        `}</script>
+      </Helmet>
       {/* Image illustrative */}
       <div
         style={{

@@ -1,8 +1,33 @@
 import React from 'react';
+import { Helmet } from 'react-helmet';
 
 export default function QuHypnosePourquoi() {
   return (
     <div style={{ width: '100%' }}>
+      <Helmet>
+        <title>Pourquoi consulter en hypnose ? | Cécile Vacher</title>
+        <meta name="description" content="Découvrez les raisons de consulter en hypnose : gestion des émotions, addictions, confiance en soi, accompagnement du changement... avec Cécile Vacher, praticienne à Villemoisson-sur-Orge." />
+        <meta property="og:title" content="Pourquoi consulter en hypnose ? | Cécile Vacher" />
+        <meta property="og:description" content="Découvrez les raisons de consulter en hypnose : gestion des émotions, addictions, confiance en soi, accompagnement du changement... avec Cécile Vacher, praticienne à Villemoisson-sur-Orge." />
+        <meta property="og:type" content="article" />
+        <meta property="og:url" content="https://www.cecile91-hypnose.fr/hypnose-pourquoi" />
+        <script type="application/ld+json">{`
+          {
+            "@context": "https://schema.org",
+            "@type": "Article",
+            "headline": "Pourquoi consulter en hypnose ?",
+            "author": {
+              "@type": "Person",
+              "name": "Cécile Vacher"
+            },
+            "publisher": {
+              "@type": "Organization",
+              "name": "Cécile Vacher - Hypnose"
+            },
+            "url": "https://www.cecile91-hypnose.fr/hypnose-pourquoi"
+          }
+        `}</script>
+      </Helmet>
       {/* Bandeau titre */}
       <div
         style={{

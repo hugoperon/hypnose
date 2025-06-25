@@ -1,4 +1,5 @@
 import React, { useRef, useState } from 'react';
+import { Helmet } from 'react-helmet';
 import emailjs from '@emailjs/browser';
 
 export default function Contact() {
@@ -30,6 +31,23 @@ export default function Contact() {
 
   return (
     <div style={{ width: '100%' }}>
+      <Helmet>
+        <title>Contact & Prise de rendez-vous | Cécile Vacher Hypnose</title>
+        <meta name="description" content="Contactez Cécile Vacher, praticienne en hypnose à Villemoisson-sur-Orge. Prise de rendez-vous, questions, informations pratiques." />
+        <meta property="og:title" content="Contact & Prise de rendez-vous | Cécile Vacher Hypnose" />
+        <meta property="og:description" content="Contactez Cécile Vacher, praticienne en hypnose à Villemoisson-sur-Orge. Prise de rendez-vous, questions, informations pratiques." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://www.cecile91-hypnose.fr/contact" />
+        <script type="application/ld+json">{`
+          {
+            "@context": "https://schema.org",
+            "@type": "ContactPage",
+            "name": "Contact & Prise de rendez-vous",
+            "url": "https://www.cecile91-hypnose.fr/contact",
+            "contactOption": ["HearingImpairedSupported", "TollFree"]
+          }
+        `}</script>
+      </Helmet>
       {/* Bandeau titre */}
       <div
         style={{

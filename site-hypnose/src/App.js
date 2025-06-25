@@ -17,6 +17,7 @@ import DeveloppementPersonnel from './DeveloppementPersonnel';
 import Sommeil from './Sommeil';
 import Infos from './Infos';
 import './App.css';
+import { Helmet } from 'react-helmet';
 
 // Composant pour remonter en haut de la page à chaque changement de route
 function ScrollToTop() {
@@ -32,6 +33,30 @@ function ScrollToTop() {
 function Home() {
   return (
     <div>
+      <Helmet>
+        <title>Hypnose à Villemoisson - Cécile Vacher</title>
+        <meta name="description" content="Séances d'hypnose, gestion du stress, addictions, développement personnel à Villemoisson-sur-Orge. Praticienne certifiée." />
+        <meta property="og:title" content="Hypnose à Villemoisson - Cécile Vacher" />
+        <meta property="og:description" content="Séances d'hypnose, gestion du stress, addictions, développement personnel à Villemoisson-sur-Orge. Praticienne certifiée." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://www.cecile91-hypnose.fr/" />
+        <script type="application/ld+json">{`
+          {
+            "@context": "https://schema.org",
+            "@type": "LocalBusiness",
+            "name": "Cécile Vacher - Hypnose",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "144 av. Victor Basch",
+              "addressLocality": "Villemoisson-sur-Orge",
+              "postalCode": "91360",
+              "addressCountry": "FR"
+            },
+            "telephone": "0607869462",
+            "url": "https://www.cecile91-hypnose.fr/"
+          }
+        `}</script>
+      </Helmet>
       <div className="banniere-top" style={{ position: 'relative', width: '100%' }}>
         <img
           className="banniere-img"

@@ -1,8 +1,33 @@
 import React from 'react';
+import { Helmet } from 'react-helmet';
 
 export default function QuEstCeQueHypnose() {
   return (
     <div style={{ width: '100%' }}>
+      <Helmet>
+        <title>Qu'est-ce que l'hypnose et la PNL ? | Cécile Vacher</title>
+        <meta name="description" content="Découvrez ce qu'est l'hypnose et la PNL, leurs origines, leurs bienfaits et leurs applications thérapeutiques avec Cécile Vacher, praticienne certifiée à Villemoisson-sur-Orge." />
+        <meta property="og:title" content="Qu'est-ce que l'hypnose et la PNL ? | Cécile Vacher" />
+        <meta property="og:description" content="Découvrez ce qu'est l'hypnose et la PNL, leurs origines, leurs bienfaits et leurs applications thérapeutiques avec Cécile Vacher, praticienne certifiée à Villemoisson-sur-Orge." />
+        <meta property="og:type" content="article" />
+        <meta property="og:url" content="https://www.cecile91-hypnose.fr/quest-ce-que-l-hypnose" />
+        <script type="application/ld+json">{`
+          {
+            "@context": "https://schema.org",
+            "@type": "Article",
+            "headline": "Qu'est-ce que l'hypnose et la PNL ?",
+            "author": {
+              "@type": "Person",
+              "name": "Cécile Vacher"
+            },
+            "publisher": {
+              "@type": "Organization",
+              "name": "Cécile Vacher - Hypnose"
+            },
+            "url": "https://www.cecile91-hypnose.fr/quest-ce-que-l-hypnose"
+          }
+        `}</script>
+      </Helmet>
       {/* Image illustrative */}
       <div
         style={{
