@@ -51,14 +51,27 @@ export default function Navbar() {
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position="fixed" color="default" elevation={2} sx={{ background: 'var(--white)', boxShadow: '0 2px 12px rgba(25, 118, 210, 0.07)', borderBottom: '3px solid var(--primary-blue)' }}>
         <Toolbar>
-          {/* Nom et sous-titre */}
-          <Box sx={{ flexGrow: 1 }}>
-            <Typography variant="h6" component="div" sx={{ color: 'var(--primary-blue)', fontWeight: 700, fontFamily: 'Montserrat, Inter, Arial, sans-serif' }}>
-              Cécile Vacher
-            </Typography>
-            <Typography variant="caption" component="div" sx={{ color: 'var(--primary-blue)', fontWeight: 700, fontFamily: 'Inter, Arial, sans-serif' }}>
-              Praticienne en hypnose
-            </Typography>
+          {/* Logo + Nom et sous-titre */}
+          <Box sx={{ display: 'flex', alignItems: 'center', flexGrow: 1 }}>
+            <img
+              src={process.env.PUBLIC_URL + '/logohypnose.png'}
+              alt="Logo hypnose"
+              style={{
+                height: isMobile ? 38 : 48,
+                width: isMobile ? 38 : 48,
+                marginRight: isMobile ? 10 : 18,
+                objectFit: 'contain',
+                background: 'transparent'
+              }}
+            />
+            <Box>
+              <Typography variant="h6" component="div" sx={{ color: 'var(--primary-blue)', fontWeight: 700, fontFamily: 'Montserrat, Inter, Arial, sans-serif' }}>
+                Cécile Vacher
+              </Typography>
+              <Typography variant="caption" component="div" sx={{ color: 'var(--primary-blue)', fontWeight: 700, fontFamily: 'Inter, Arial, sans-serif' }}>
+                Praticienne en hypnose
+              </Typography>
+            </Box>
           </Box>
 
           {/* Menu burger sur mobile */}
