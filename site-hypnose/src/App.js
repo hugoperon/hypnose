@@ -158,7 +158,7 @@ function Home() {
             L'hypnose peut vous accompagner de manière simple et rapide, peut intervenir dans différents domaines, comme la gestion des émotions, des douleurs, des dépendances, des traumatismes et dans la préparation mentale.<br /><br />
             Mon approche, c'est l'alliance des thérapies. Les thérapies dites brèves sont des thérapies qui peuvent vous permettre de vous sentir mieux rapidement car elles sont davantage orientées sur le comment et les solutions plutôt que sur le pourquoi et les causes.<br /><br />
             Si vous êtes à la recherche d'un espace sécurisé pour avancer, retrouver équilibre et sérénité, je serais heureuse de vous accueillir et de vous guider sur votre chemin.<br /><br />
-            Parce qu'une consultation, c'est aussi une rencontre. <a href="https://www.google.com" target="_blank" rel="noopener noreferrer" style={{color: '#1976d2', fontWeight: 'bold', textDecoration: 'none', borderBottom: '2px solid #1976d2'}}>Contactez-moi</a>.
+            Parce qu'une consultation, c'est aussi une rencontre. <a href="https://www.resalib.fr/praticien/110458-cecile-vacher-hypnotherapeute-villemoisson-sur-orge#newrdvmodal" target="_blank" rel="noopener noreferrer" style={{color: '#1976d2', fontWeight: 'bold', textDecoration: 'none', borderBottom: '2px solid #1976d2'}}>Contactez-moi</a>.
           </p>
           <br />
           <br />

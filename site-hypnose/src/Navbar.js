@@ -133,7 +133,7 @@ export default function Navbar() {
                     </ListItem>
                     <Divider />
                     <ListItem disablePadding>
-                      <ListItemButton component="a" href="https://www.google.com" target="_blank" rel="noopener noreferrer">
+                      <ListItemButton component="a" href="https://www.resalib.fr/praticien/110458-cecile-vacher-hypnotherapeute-villemoisson-sur-orge#newrdvmodal" target="_blank" rel="noopener noreferrer">
                         <ListItemText primary="Prendre RDV" />
                       </ListItemButton>
                     </ListItem>
@@ -187,7 +187,7 @@ export default function Navbar() {
                 variant="contained"
                 color="primary"
                 component="a"
-                href="https://www.google.com"
+                href="https://www.resalib.fr/praticien/110458-cecile-vacher-hypnotherapeute-villemoisson-sur-orge#newrdvmodal"
                 target="_blank"
                 rel="noopener noreferrer"
                 sx={{
